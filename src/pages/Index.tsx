@@ -2,12 +2,14 @@ import { Navigation } from "@/components/Navigation";
 import { SectionHeader } from "@/components/SectionHeader";
 import { PathwayNode, PathwayDetail } from "@/components/PathwayNode";
 import { ValueBadge } from "@/components/ValueBadge";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Sparkles, Target, Users, Scale } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
       <Navigation />
 
       {/* Hero Section */}
