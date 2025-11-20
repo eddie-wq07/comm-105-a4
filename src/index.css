@@ -69,25 +69,41 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  *::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   html {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
   }
 
   html::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari, Opera */
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   
   body::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari, Opera */
+    display: none;
+    width: 0;
+    height: 0;
   }
   
   h1, h2, h3, h4, h5, h6 {
