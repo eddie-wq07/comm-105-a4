@@ -11,28 +11,45 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-background via-primary-lighter/30 to-secondary-lighter/30">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-br from-background via-primary-lighter/30 to-secondary-lighter/30 animate-gradient">
+        {/* Floating Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
+          <div className="absolute top-40 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+          
+          {/* Geometric shapes */}
+          <div className="absolute top-1/4 right-1/4 w-20 h-20 border-2 border-primary/20 rotate-12 animate-float" style={{ animationDelay: '0.5s' }}>
+            <div className="w-full h-full border border-primary/30 rotate-45" />
+          </div>
+          <div className="absolute bottom-1/3 left-1/4 w-16 h-16 border-2 border-secondary/20 rounded-lg rotate-45 animate-float-slow" />
+          <div className="absolute top-1/3 left-1/2 w-12 h-12 border-2 border-accent/20 animate-pulse-ring" />
+        </div>
+
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center animate-fade-in">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary-lighter border border-primary rounded-full text-primary text-sm font-semibold">
+            <div className="inline-block mb-4 px-4 py-2 bg-primary-lighter border border-primary rounded-full text-primary text-sm font-semibold animate-bounce-in shadow-glow">
               UBC BUCS Student
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-scale-in">
               Career Pathways
-              <span className="text-gradient block mt-2">in Tech & Innovation</span>
+              <span className="text-gradient block mt-2 bg-gradient-to-r from-primary via-secondary to-accent animate-shimmer bg-clip-text">
+                in Tech & Innovation
+              </span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
               Exploring the intersection of software applications, artificial intelligence, and policy to
               improve well-being and solve impossible questions.
             </p>
           </div>
 
           {/* Core Interest */}
-          <div className="mt-16 animate-scale-in">
-            <Card className="p-8 bg-card border-2 border-primary/20 shadow-lg hover-lift">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary-lighter rounded-lg">
-                  <Sparkles className="w-6 h-6 text-primary" />
+          <div className="mt-16 animate-scale-in" style={{ animationDelay: '0.4s' }}>
+            <Card className="p-8 bg-card/80 backdrop-blur-sm border-2 border-primary/30 shadow-xl hover-lift relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="flex items-start gap-4 relative z-10">
+                <div className="p-3 bg-gradient-to-br from-primary-lighter to-primary/20 rounded-lg shadow-lg animate-pulse-ring">
+                  <Sparkles className="w-6 h-6 text-primary animate-float" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-muted-foreground uppercase tracking-wide mb-2">
@@ -48,27 +65,35 @@ const Index = () => {
           </div>
 
           {/* Professional Values */}
-          <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.6s" }}>
             <h3 className="text-center text-lg font-semibold text-muted-foreground uppercase tracking-wide mb-6">
               Professional Values
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              <ValueBadge
-                value="Loyalty"
-                description="Commitment to long-term relationships and organizational success"
-              />
-              <ValueBadge
-                value="Rigour"
-                description="Dedication to excellence, precision, and thorough analysis"
-              />
-              <ValueBadge
-                value="Balance"
-                description="Maintaining equilibrium between innovation and stability"
-              />
-              <ValueBadge
-                value="Risk-taking"
-                description="Calculated ventures into uncharted technological territories"
-              />
+              <div className="animate-bounce-in" style={{ animationDelay: '0.7s' }}>
+                <ValueBadge
+                  value="Loyalty"
+                  description="Commitment to long-term relationships and organizational success"
+                />
+              </div>
+              <div className="animate-bounce-in" style={{ animationDelay: '0.8s' }}>
+                <ValueBadge
+                  value="Rigour"
+                  description="Dedication to excellence, precision, and thorough analysis"
+                />
+              </div>
+              <div className="animate-bounce-in" style={{ animationDelay: '0.9s' }}>
+                <ValueBadge
+                  value="Balance"
+                  description="Maintaining equilibrium between innovation and stability"
+                />
+              </div>
+              <div className="animate-bounce-in" style={{ animationDelay: '1s' }}>
+                <ValueBadge
+                  value="Risk-taking"
+                  description="Calculated ventures into uncharted technological territories"
+                />
+              </div>
             </div>
           </div>
         </div>
