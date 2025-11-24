@@ -35,7 +35,7 @@ const Index = () => {
                 COMM 105
               </div>
               <div className="inline-block px-4 py-2 bg-secondary-lighter border border-secondary rounded-full text-secondary text-sm font-semibold animate-bounce-in shadow-glow" style={{ animationDelay: '0.1s' }}>
-                Student #11699626
+                Student #99626
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-scale-in">
