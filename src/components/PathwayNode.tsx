@@ -64,11 +64,11 @@ interface PathwayDetailProps {
 export const PathwayDetail = ({ label, children }: PathwayDetailProps) => {
   return (
     <div className="group/detail cursor-pointer">
-      <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2 group-hover/detail:text-primary transition-all duration-300 flex items-center gap-2">
-        <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground group-hover/detail:bg-primary group-hover/detail:scale-150 transition-all duration-300" />
+      <h4 className="text-sm font-bold text-foreground/90 uppercase tracking-wide mb-2 group-hover/detail:text-primary transition-all duration-300 flex items-center gap-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-foreground/60 group-hover/detail:bg-primary group-hover/detail:scale-150 transition-all duration-300" />
         {label}
       </h4>
-      <div className="text-foreground leading-relaxed group-hover/detail:translate-x-2 transition-transform duration-300">
+      <div className="text-foreground font-medium leading-relaxed group-hover/detail:translate-x-2 transition-transform duration-300">
         {children}
       </div>
     </div>
