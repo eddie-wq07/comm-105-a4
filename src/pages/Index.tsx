@@ -102,7 +102,7 @@ const Index = () => {
       </section>
 
       {/* Visual Pathways Section */}
-      <section id="visual" className="py-32 pb-40 px-6 bg-background">
+      <section id="visual" className="py-32 px-6 bg-background">
         <div className="container mx-auto max-w-7xl">
           <SectionHeader
             title="Visual Pathways Representation"
