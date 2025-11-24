@@ -24,7 +24,7 @@ export const PathwayNode = ({ title, color, children, className = "", style }: P
 
   return (
     <Card
-      className={`p-6 border-2 transition-all duration-300 ${colorClasses[color]} ${className}`}
+      className={`p-6 border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${colorClasses[color]} ${className}`}
       style={style}
     >
       <h3 className={`text-xl font-bold mb-4 ${titleColorClasses[color]}`}>{title}</h3>
