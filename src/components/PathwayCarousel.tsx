@@ -80,7 +80,12 @@ const pathways: PathwaySlide[] = [
 ];
 
 export const PathwayCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: "center",
+    dragFree: false,
+    containScroll: "trimSnaps"
+  });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -103,8 +108,8 @@ export const PathwayCarousel = () => {
   return (
     <div className="relative">
       {/* Carousel */}
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-6">
+      <div className="overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing" ref={emblaRef}>
+        <div className="flex gap-6 select-none">
           {pathways.map((pathway, index) => (
             <div
               key={pathway.id}
