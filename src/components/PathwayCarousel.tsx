@@ -142,7 +142,7 @@ export const PathwayCarousel = () => {
                   <PathwayNode
                     title=""
                     color={pathway.color}
-                    className="transform transition-all duration-300"
+                    className="transform transition-all duration-300 min-h-[600px]"
                   >
                     <PathwayDetail label="Skills">
                       <ul className="space-y-1 text-sm">
