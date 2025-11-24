@@ -108,7 +108,7 @@ export const PathwayCarousel = () => {
           {pathways.map((pathway, index) => (
             <div
               key={pathway.id}
-              className="flex-[0_0_100%] min-w-0 md:flex-[0_0_80%] lg:flex-[0_0_70%]"
+              className="flex-[0_0_100%] min-w-0 md:flex-[0_0_80%] lg:flex-[0_0_70%] px-2"
             >
               <div
                 className={`group perspective-1000 ${
@@ -116,26 +116,18 @@ export const PathwayCarousel = () => {
                 }`}
               >
                 {/* 3D Card Container */}
-                <div className="relative transform-style-3d transition-all duration-500 hover:scale-105 hover:rotate-y-2">
+                <div className="relative transform-style-3d transition-all duration-500 hover:scale-[1.02]">
                   {/* Image with 3D effect */}
-                  <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-glow group-hover:-translate-z-4">
+                  <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-glow">
                     <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/40 z-10" />
                     <img
                       src={pathway.image}
                       alt={pathway.title}
-                      className="w-full h-full object-cover transform transition-all duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transform transition-all duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent z-20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent z-20" />
                     <div className="absolute bottom-6 left-6 right-6 z-30">
-                      <h3
-                        className={`text-3xl font-bold mb-2 ${
-                          pathway.color === "primary"
-                            ? "text-primary"
-                            : pathway.color === "secondary"
-                            ? "text-secondary"
-                            : "text-accent"
-                        } drop-shadow-lg`}
-                      >
+                      <h3 className="text-3xl font-bold mb-2 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                         {pathway.title}
                       </h3>
                     </div>
@@ -145,7 +137,7 @@ export const PathwayCarousel = () => {
                   <PathwayNode
                     title=""
                     color={pathway.color}
-                    className="transform transition-all duration-500 group-hover:translate-z-8"
+                    className="transform transition-all duration-300"
                   >
                     <PathwayDetail label="Skills">
                       <ul className="space-y-1 text-sm">
