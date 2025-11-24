@@ -4,7 +4,8 @@ import { PathwayNode, PathwayDetail } from "@/components/PathwayNode";
 import { ValueBadge } from "@/components/ValueBadge";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Sparkles, Target, Users, Scale, TrendingUp, Gavel, Brain, Code, BookOpen, Briefcase, Lightbulb } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { ArrowRight, Sparkles, Target, Users, Scale, TrendingUp, Gavel, Brain, Code, BookOpen, Briefcase, Lightbulb, Zap, Rocket } from "lucide-react";
 
 const Index = () => {
   return (
@@ -272,33 +273,130 @@ const Index = () => {
           </div>
 
           {/* Ultimate Dream Pathway */}
-          <div className="animate-fade-in">
-            <Card className="p-8 bg-gradient-to-br from-primary-lighter via-secondary-lighter to-accent-lighter border-2 border-primary shadow-xl">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">Ultimate Dream Pathway</h3>
-                <p className="text-muted-foreground">A journey from technical expertise to national leadership</p>
+          <div className="animate-fade-in relative">
+            <Card className="p-8 bg-gradient-to-br from-primary-lighter via-secondary-lighter to-accent-lighter border-2 border-primary shadow-xl relative overflow-hidden group">
+              {/* Animated background elements */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-float" />
+                <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-float-slow" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-secondary/5 rounded-full blur-3xl animate-pulse" />
               </div>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-                <div className="flex items-center gap-3 bg-card/80 px-6 py-4 rounded-lg shadow-md border-2 border-primary">
-                  <Target className="w-6 h-6 text-primary" />
-                  <span className="text-lg font-bold text-primary">Quantitative Developer</span>
+
+              <div className="text-center mb-8 relative z-10">
+                <div className="inline-flex items-center gap-2 mb-3 animate-bounce-in">
+                  <Rocket className="w-6 h-6 text-primary animate-float" />
+                  <h3 className="text-3xl font-bold text-foreground">Ultimate Dream Pathway</h3>
+                  <Zap className="w-6 h-6 text-accent animate-float" style={{ animationDelay: '0.5s' }} />
                 </div>
-                <ArrowRight className="w-8 h-8 text-primary rotate-90 md:rotate-0" />
-                <div className="flex items-center gap-3 bg-card/80 px-6 py-4 rounded-lg shadow-md border-2 border-secondary">
-                  <Sparkles className="w-6 h-6 text-secondary" />
-                  <span className="text-lg font-bold text-secondary">Tech Founder</span>
+                <p className="text-muted-foreground text-lg">A journey from technical expertise to national leadership</p>
+              </div>
+
+              <TooltipProvider>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-8 relative z-10">
+                  {/* Stage 1: Quantitative Developer */}
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="group/stage relative cursor-pointer">
+                        <div className="absolute inset-0 bg-primary/20 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" />
+                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-primary transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/80">
+                          <div className="p-3 bg-gradient-to-br from-primary-lighter to-primary/30 rounded-full shadow-lg group-hover/stage:animate-pulse">
+                            <TrendingUp className="w-8 h-8 text-primary transition-transform duration-300 group-hover/stage:rotate-12" />
+                          </div>
+                          <div className="text-center">
+                            <div className="text-xs uppercase tracking-wider text-primary/70 font-semibold mb-1">Phase 1</div>
+                            <span className="text-lg font-bold text-primary block">Quantitative</span>
+                            <span className="text-lg font-bold text-primary">Developer</span>
+                          </div>
+                        </div>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs p-4">
+                      <p className="font-semibold mb-2">Foundation Phase (Years 1-5)</p>
+                      <p className="text-sm">Master algorithmic trading, build technical credibility, and develop deep understanding of financial systems through hands-on development.</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  {/* Arrow 1 */}
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-lg opacity-50 animate-pulse" />
+                    <ArrowRight className="w-10 h-10 text-primary rotate-90 md:rotate-0 relative z-10 animate-pulse transition-transform hover:scale-125" />
+                  </div>
+
+                  {/* Stage 2: Tech Founder */}
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="group/stage relative cursor-pointer">
+                        <div className="absolute inset-0 bg-secondary/20 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" style={{ animationDelay: '0.2s' }} />
+                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-secondary transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-2 hover:border-secondary/80">
+                          <div className="p-3 bg-gradient-to-br from-secondary-lighter to-secondary/30 rounded-full shadow-lg group-hover/stage:animate-pulse">
+                            <Sparkles className="w-8 h-8 text-secondary transition-transform duration-300 group-hover/stage:rotate-12" />
+                          </div>
+                          <div className="text-center">
+                            <div className="text-xs uppercase tracking-wider text-secondary/70 font-semibold mb-1">Phase 2</div>
+                            <span className="text-lg font-bold text-secondary block">Tech</span>
+                            <span className="text-lg font-bold text-secondary">Founder</span>
+                          </div>
+                        </div>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs p-4">
+                      <p className="font-semibold mb-2">Growth Phase (Years 5-12)</p>
+                      <p className="text-sm">Launch and scale an AI-driven fintech startup, gain entrepreneurial experience, and build networks across technology and business sectors.</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  {/* Arrow 2 */}
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent rounded-full blur-lg opacity-50 animate-pulse" style={{ animationDelay: '0.3s' }} />
+                    <ArrowRight className="w-10 h-10 text-secondary rotate-90 md:rotate-0 relative z-10 animate-pulse transition-transform hover:scale-125" style={{ animationDelay: '0.2s' }} />
+                  </div>
+
+                  {/* Stage 3: AI Minister */}
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="group/stage relative cursor-pointer">
+                        <div className="absolute inset-0 bg-accent/20 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" style={{ animationDelay: '0.4s' }} />
+                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-accent transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-2 hover:border-accent/80">
+                          <div className="p-3 bg-gradient-to-br from-accent-lighter to-accent/30 rounded-full shadow-lg group-hover/stage:animate-pulse">
+                            <Users className="w-8 h-8 text-accent transition-transform duration-300 group-hover/stage:rotate-12" />
+                          </div>
+                          <div className="text-center">
+                            <div className="text-xs uppercase tracking-wider text-accent/70 font-semibold mb-1">Phase 3</div>
+                            <span className="text-lg font-bold text-accent block">AI</span>
+                            <span className="text-lg font-bold text-accent">Minister</span>
+                          </div>
+                        </div>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs p-4">
+                      <p className="font-semibold mb-2">Leadership Phase (Years 12+)</p>
+                      <p className="text-sm">Shape national AI policy with real-world experience, lead Canada's technological innovation, and create frameworks that balance progress with ethics.</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </div>
-                <ArrowRight className="w-8 h-8 text-secondary rotate-90 md:rotate-0" />
-                <div className="flex items-center gap-3 bg-card/80 px-6 py-4 rounded-lg shadow-md border-2 border-accent">
-                  <Users className="w-6 h-6 text-accent" />
-                  <span className="text-lg font-bold text-accent">AI Minister</span>
+              </TooltipProvider>
+
+              {/* Enhanced description with timeline */}
+              <div className="relative z-10 mt-8 space-y-4">
+                <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  Building technical foundations in quantitative finance, gaining entrepreneurial experience
+                  through founding and scaling a tech company, then leveraging this expertise to shape
+                  national AI policy and lead Canada's technological future.
+                </p>
+                
+                {/* Key milestones */}
+                <div className="flex flex-wrap justify-center gap-4 mt-6">
+                  <div className="group/milestone px-4 py-2 bg-primary-lighter/50 backdrop-blur-sm rounded-full border border-primary/30 hover:border-primary transition-all duration-300 hover:scale-105 cursor-default">
+                    <span className="text-xs font-semibold text-primary">15+ Years Journey</span>
+                  </div>
+                  <div className="group/milestone px-4 py-2 bg-secondary-lighter/50 backdrop-blur-sm rounded-full border border-secondary/30 hover:border-secondary transition-all duration-300 hover:scale-105 cursor-default">
+                    <span className="text-xs font-semibold text-secondary">3 Distinct Phases</span>
+                  </div>
+                  <div className="group/milestone px-4 py-2 bg-accent-lighter/50 backdrop-blur-sm rounded-full border border-accent/30 hover:border-accent transition-all duration-300 hover:scale-105 cursor-default">
+                    <span className="text-xs font-semibold text-accent">National Impact</span>
+                  </div>
                 </div>
               </div>
-              <p className="text-center text-sm text-muted-foreground mt-6 max-w-3xl mx-auto">
-                Building technical foundations in quantitative finance, gaining entrepreneurial experience
-                through founding and scaling a tech company, then leveraging this expertise to shape
-                national AI policy and lead Canada's technological future.
-              </p>
             </Card>
           </div>
         </div>
