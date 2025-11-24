@@ -4,7 +4,7 @@ import { PathwayNode, PathwayDetail } from "@/components/PathwayNode";
 import { ValueBadge } from "@/components/ValueBadge";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Sparkles, Target, Users, Scale } from "lucide-react";
+import { ArrowRight, Sparkles, Target, Users, Scale, TrendingUp, Gavel, Brain, Code, BookOpen, Briefcase, Lightbulb } from "lucide-react";
 
 const Index = () => {
   return (
@@ -112,13 +112,25 @@ const Index = () => {
           {/* Career Paths Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Path 1: Quantitative Developer */}
-            <PathwayNode title="Quantitative Developer" color="primary" className="animate-slide-in">
+            <PathwayNode title="Quantitative Developer" color="primary" icon={TrendingUp} className="animate-slide-in">
               <PathwayDetail label="Skills">
-                <ul className="space-y-1 text-sm">
-                  <li>• Python, C++, R programming</li>
-                  <li>• Statistical modeling</li>
-                  <li>• Financial mathematics</li>
-                  <li>• Machine learning</li>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Code className="w-4 h-4 text-primary" />
+                    Python, C++, R programming
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <TrendingUp className="w-4 h-4 text-primary" />
+                    Statistical modeling
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Briefcase className="w-4 h-4 text-primary" />
+                    Financial mathematics
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Brain className="w-4 h-4 text-primary" />
+                    Machine learning
+                  </li>
                 </ul>
               </PathwayDetail>
 
@@ -152,15 +164,28 @@ const Index = () => {
             <PathwayNode
               title="AI Minister"
               color="secondary"
+              icon={Brain}
               className="animate-slide-in"
               style={{ animationDelay: "0.1s" }}
             >
               <PathwayDetail label="Skills">
-                <ul className="space-y-1 text-sm">
-                  <li>• Public policy development</li>
-                  <li>• AI ethics & governance</li>
-                  <li>• Stakeholder engagement</li>
-                  <li>• Strategic planning</li>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Scale className="w-4 h-4 text-secondary" />
+                    Public policy development
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Brain className="w-4 h-4 text-secondary" />
+                    AI ethics & governance
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Users className="w-4 h-4 text-secondary" />
+                    Stakeholder engagement
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Target className="w-4 h-4 text-secondary" />
+                    Strategic planning
+                  </li>
                 </ul>
               </PathwayDetail>
 
@@ -194,15 +219,28 @@ const Index = () => {
             <PathwayNode
               title="Tech Lawyer"
               color="accent"
+              icon={Gavel}
               className="animate-slide-in"
               style={{ animationDelay: "0.2s" }}
             >
               <PathwayDetail label="Skills">
-                <ul className="space-y-1 text-sm">
-                  <li>• Legal research</li>
-                  <li>• Technology & IP law</li>
-                  <li>• Contract negotiation</li>
-                  <li>• AI systems understanding</li>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <BookOpen className="w-4 h-4 text-accent" />
+                    Legal research
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Gavel className="w-4 h-4 text-accent" />
+                    Technology & IP law
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Briefcase className="w-4 h-4 text-accent" />
+                    Contract negotiation
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Lightbulb className="w-4 h-4 text-accent" />
+                    AI systems understanding
+                  </li>
                 </ul>
               </PathwayDetail>
 
