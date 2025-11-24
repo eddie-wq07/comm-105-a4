@@ -1,10 +1,10 @@
 import { Navigation } from "@/components/Navigation";
 import { SectionHeader } from "@/components/SectionHeader";
-import { PathwayNode, PathwayDetail } from "@/components/PathwayNode";
 import { ValueBadge } from "@/components/ValueBadge";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { PathwayCarousel } from "@/components/PathwayCarousel";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Sparkles, Target, Users, Scale } from "lucide-react";
+import { ArrowRight, Sparkles, Target, Users } from "lucide-react";
 
 const Index = () => {
   return (
@@ -109,128 +109,9 @@ const Index = () => {
             subtitle="Three distinct career paths converging toward technological innovation and societal impact"
           />
 
-          {/* Career Paths Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Path 1: Quantitative Developer */}
-            <PathwayNode title="Quantitative Developer" color="primary" className="animate-slide-in">
-              <PathwayDetail label="Skills">
-                <ul className="space-y-1 text-sm">
-                  <li>• Python, C++, R programming</li>
-                  <li>• Statistical modeling</li>
-                  <li>• Financial mathematics</li>
-                  <li>• Machine learning</li>
-                </ul>
-              </PathwayDetail>
-
-              <PathwayDetail label="Education & Training">
-                <p className="text-sm">
-                  Combined Major in Business & CS (BUCS), quantitative methods focus, CFA Level I certification
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Experience">
-                <p className="text-sm">
-                  UBC Algorithmic Trading Club, CPSC TA, computational finance research, fintech hackathons
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Impact">
-                <p className="text-sm">
-                  Financial literacy workshops, open-source contributions to quantitative libraries
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Questions">
-                <ul className="space-y-1 text-sm">
-                  <li>• How to balance algorithmic efficiency with ethical trading?</li>
-                  <li>• What role will quantum computing play in quant strategies?</li>
-                </ul>
-              </PathwayDetail>
-            </PathwayNode>
-
-            {/* Path 2: AI Minister */}
-            <PathwayNode
-              title="AI Minister"
-              color="secondary"
-              className="animate-slide-in"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <PathwayDetail label="Skills">
-                <ul className="space-y-1 text-sm">
-                  <li>• Public policy development</li>
-                  <li>• AI ethics & governance</li>
-                  <li>• Stakeholder engagement</li>
-                  <li>• Strategic planning</li>
-                </ul>
-              </PathwayDetail>
-
-              <PathwayDetail label="Education & Training">
-                <p className="text-sm">
-                  BUCS with policy courses, graduate studies in public administration, AI policy training
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Experience">
-                <p className="text-sm">
-                  Tech Policy Club president, government tech internships, Model Parliament, tech education advocacy
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Impact">
-                <p className="text-sm">
-                  Inclusive AI policies for diverse communities, digital literacy programs for marginalized groups
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Questions">
-                <ul className="space-y-1 text-sm">
-                  <li>• How can Canada compete in AI while maintaining values?</li>
-                  <li>• What frameworks best balance innovation and protection?</li>
-                </ul>
-              </PathwayDetail>
-            </PathwayNode>
-
-            {/* Path 3: Tech Lawyer */}
-            <PathwayNode
-              title="Tech Lawyer"
-              color="accent"
-              className="animate-slide-in"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <PathwayDetail label="Skills">
-                <ul className="space-y-1 text-sm">
-                  <li>• Legal research</li>
-                  <li>• Technology & IP law</li>
-                  <li>• Contract negotiation</li>
-                  <li>• AI systems understanding</li>
-                </ul>
-              </PathwayDetail>
-
-              <PathwayDetail label="Education & Training">
-                <p className="text-sm">
-                  BUCS followed by JD, specialized tech law and IP courses, bar admission, continuing education in AI law
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Experience">
-                <p className="text-sm">
-                  Pre-Law Society, tech policy research, legal aid for startups, moot court competitions
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Impact">
-                <p className="text-sm">
-                  Pro bono services for tech startups, workshops on digital rights and AI liability
-                </p>
-              </PathwayDetail>
-
-              <PathwayDetail label="Questions">
-                <ul className="space-y-1 text-sm">
-                  <li>• Who is liable when AI systems cause harm?</li>
-                  <li>• How should copyright law evolve for AI-generated content?</li>
-                </ul>
-              </PathwayDetail>
-            </PathwayNode>
+          {/* Career Paths Carousel */}
+          <div className="mb-16">
+            <PathwayCarousel />
           </div>
 
           {/* Ultimate Dream Pathway */}
