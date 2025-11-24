@@ -13,9 +13,9 @@ interface PathwayNodeProps {
 
 export const PathwayNode = ({ title, color, icon: Icon, children, className = "", style }: PathwayNodeProps) => {
   const colorClasses = {
-    primary: "border-primary/60 bg-card hover:shadow-glow hover:border-primary",
-    secondary: "border-secondary/60 bg-card hover:shadow-glow-secondary hover:border-secondary",
-    accent: "border-accent/60 bg-card hover:shadow-glow-accent hover:border-accent",
+    primary: "border-primary/60 bg-card shadow-glow/50 hover:shadow-glow hover:border-primary",
+    secondary: "border-secondary/60 bg-card shadow-glow-secondary/50 hover:shadow-glow-secondary hover:border-secondary",
+    accent: "border-accent/60 bg-card shadow-glow-accent/50 hover:shadow-glow-accent hover:border-accent",
   };
 
   const titleColorClasses = {
