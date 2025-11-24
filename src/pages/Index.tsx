@@ -57,10 +57,19 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-primary uppercase tracking-wide mb-2">
-                    My Passion
+                    About This Interactive Experience
                   </h3>
-                  <p className="text-lg text-foreground leading-relaxed font-medium">
-                    Building software applications to improve the well-being of all while solving impossible questions through AI and innovative technology
+                  <p className="text-base text-foreground leading-relaxed font-medium">
+                    I spent hours programming and debugging the interactive features to show my passion for business, technology, and impact. The blended gradient colors represent how these areas come together. The interactions highlight innovation and my attention to detail as a software engineer, with the user always at the center. The main takeaway from my visual is that software is both powerful and creative, which is why I chose to code my assignment as a way to express my passion.
+                  </p>
+                  <p className="text-base text-foreground leading-relaxed font-medium mt-3">
+                    The glowing background on hover reflects how I see each pathway: bright, promising, and full of potential, not just for me personally, but for future careers and job creation.
+                  </p>
+                  <p className="text-base text-foreground leading-relaxed font-medium mt-3">
+                    I also paid close attention to the hover effects for the individual skills. To me, each skill stands on its own and requires focused effort, but they all eventually merge into a single, cohesive whole. I included icons to reinforce this: a bullish market chart for quantitative developer to represent growth and opportunity, and a brain for AI minister to emphasize that human intelligence is our natural "supercomputer," something AI can't replace, and a reminder of why it matters.
+                  </p>
+                  <p className="text-base text-foreground leading-relaxed font-medium mt-3">
+                    Finally, the tech lawyer icon uses a gavel to symbolize influence and authority. It represents the need for clarity and guidance in a space full of noise and uncertainty, especially with the rapid rise of AI.
                   </p>
                 </div>
               </div>
