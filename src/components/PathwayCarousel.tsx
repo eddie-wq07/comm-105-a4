@@ -182,7 +182,7 @@ export const PathwayCarousel = () => {
       </div>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-center gap-4 mt-8">
+      <div className="flex justify-center gap-4 mt-16">
         <Button
           variant="outline"
           size="icon"
