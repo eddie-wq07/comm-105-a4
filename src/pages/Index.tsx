@@ -419,7 +419,16 @@ const Index = () => {
               </h3>
               <div className="space-y-3 text-foreground leading-relaxed text-sm">
                 <p>
-                  My career pathways converge on using technology to solve impossible questions and improve well-being. The key takeaway is my commitment to <strong>rigour</strong> in technical development, <strong>balance</strong> in stakeholder perspectives, calculated <strong>risk-taking</strong> in ventures, and <strong>loyalty</strong> to collective well-being. These values create a unified vision where technical mastery, business acumen, and policy insight reinforce each other.
+                  I spent hours programming and debugging the interactive features to show my passion for business, technology, and impact. The blended gradient colors represent how these areas come together. The interactions highlight innovation and my attention to detail as a software engineer, with the user always at the center. The main takeaway from my visual is that software is both powerful and creative, which is why I chose to code my assignment as a way to express my passion.
+                </p>
+                <p>
+                  The glowing background on hover reflects how I see each pathway: bright, promising, and full of potential, not just for me personally, but for future careers and job creation.
+                </p>
+                <p>
+                  I also paid close attention to the hover effects for the individual skills. To me, each skill stands on its own and requires focused effort, but they all eventually merge into a single, cohesive whole. I included icons to reinforce this: a bullish market chart for quantitative developer to represent growth and opportunity, and a brain for AI minister to emphasize that human intelligence is our natural "supercomputer," something AI can't replace, and a reminder of why it matters.
+                </p>
+                <p>
+                  Finally, the tech lawyer icon uses a gavel to symbolize influence and authority. It represents the need for clarity and guidance in a space full of noise and uncertainty, especially with the rapid rise of AI.
                 </p>
               </div>
             </Card>
