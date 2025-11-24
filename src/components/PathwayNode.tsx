@@ -13,9 +13,9 @@ interface PathwayNodeProps {
 
 export const PathwayNode = ({ title, color, icon: Icon, children, className = "", style }: PathwayNodeProps) => {
   const colorClasses = {
-    primary: "border-primary bg-primary-lighter hover:shadow-primary/20 hover:shadow-2xl",
-    secondary: "border-secondary bg-secondary-lighter hover:shadow-secondary/20 hover:shadow-2xl",
-    accent: "border-accent bg-accent-lighter hover:shadow-accent/20 hover:shadow-2xl",
+    primary: "border-primary/60 bg-card hover:shadow-glow hover:border-primary",
+    secondary: "border-secondary/60 bg-card hover:shadow-glow-secondary hover:border-secondary",
+    accent: "border-accent/60 bg-card hover:shadow-glow-accent hover:border-accent",
   };
 
   const titleColorClasses = {
@@ -25,18 +25,18 @@ export const PathwayNode = ({ title, color, icon: Icon, children, className = ""
   };
 
   const iconBgClasses = {
-    primary: "bg-gradient-to-br from-primary-lighter to-primary/30",
-    secondary: "bg-gradient-to-br from-secondary-lighter to-secondary/30",
-    accent: "bg-gradient-to-br from-accent-lighter to-accent/30",
+    primary: "bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30",
+    secondary: "bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/30",
+    accent: "bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30",
   };
 
   return (
     <Card
-      className={`group p-6 border-2 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl ${colorClasses[color]} ${className} relative overflow-hidden`}
+      className={`group p-6 border-2 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] ${colorClasses[color]} ${className} relative overflow-hidden backdrop-blur-sm`}
       style={style}
     >
       {/* Animated background gradient on hover */}
-      <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${colorClasses[color]}`} />
+      <div className={`absolute inset-0 bg-gradient-to-br from-background via-card to-background opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
       
       {/* Icon header */}
       <div className="relative z-10 flex items-center gap-4 mb-6">
@@ -51,7 +51,7 @@ export const PathwayNode = ({ title, color, icon: Icon, children, className = ""
       <div className="space-y-4 relative z-10">{children}</div>
       
       {/* Decorative corner accent */}
-      <div className={`absolute -bottom-8 -right-8 w-32 h-32 ${iconBgClasses[color]} rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500`} />
+      <div className={`absolute -bottom-8 -right-8 w-32 h-32 rounded-full blur-2xl opacity-10 group-hover:opacity-30 transition-opacity duration-500 ${colorClasses[color]}`} />
     </Card>
   );
 };
