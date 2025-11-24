@@ -108,12 +108,12 @@ export const PathwayCarousel = () => {
   return (
     <div className="relative">
       {/* Carousel */}
-      <div className="overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing" ref={emblaRef}>
-        <div className="flex gap-6 select-none">
+      <div className="overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing px-4" ref={emblaRef}>
+        <div className="flex gap-8 select-none">
           {pathways.map((pathway, index) => (
             <div
               key={pathway.id}
-              className="flex-[0_0_100%] min-w-0 md:flex-[0_0_80%] lg:flex-[0_0_70%] px-2"
+              className="flex-[0_0_100%] min-w-0 md:flex-[0_0_80%] lg:flex-[0_0_70%]"
             >
               <div
                 className={`group perspective-1000 relative ${
