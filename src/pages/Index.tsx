@@ -14,32 +14,32 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-br from-background via-primary-lighter/30 to-secondary-lighter/30 animate-gradient">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-br from-background via-background to-card animate-gradient">
         {/* Floating Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
-          <div className="absolute top-40 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '1s' }} />
-          <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/15 rounded-full blur-3xl animate-float" />
+          <div className="absolute top-40 right-20 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-accent/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
           
           {/* Geometric shapes */}
-          <div className="absolute top-1/4 right-1/4 w-20 h-20 border-2 border-primary/20 rotate-12 animate-float" style={{ animationDelay: '0.5s' }}>
-            <div className="w-full h-full border border-primary/30 rotate-45" />
+          <div className="absolute top-1/4 right-1/4 w-20 h-20 border-2 border-primary/30 rotate-12 animate-float" style={{ animationDelay: '0.5s' }}>
+            <div className="w-full h-full border border-primary/40 rotate-45" />
           </div>
-          <div className="absolute bottom-1/3 left-1/4 w-16 h-16 border-2 border-secondary/20 rounded-lg rotate-45 animate-float-slow" />
-          <div className="absolute top-1/3 left-1/2 w-12 h-12 border-2 border-accent/20 animate-pulse-ring" />
+          <div className="absolute bottom-1/3 left-1/4 w-16 h-16 border-2 border-secondary/30 rounded-lg rotate-45 animate-float-slow" />
+          <div className="absolute top-1/3 left-1/2 w-12 h-12 border-2 border-accent/30 animate-pulse-ring" />
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center animate-fade-in">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="inline-block px-4 py-2 bg-primary-lighter border border-primary rounded-full text-primary text-sm font-semibold animate-bounce-in shadow-glow">
+              <div className="inline-block px-4 py-2 bg-primary/10 backdrop-blur-sm border-2 border-primary/50 rounded-full text-primary text-sm font-bold animate-bounce-in shadow-glow">
                 COMM 105
               </div>
-              <div className="inline-block px-4 py-2 bg-secondary-lighter border border-secondary rounded-full text-secondary text-sm font-semibold animate-bounce-in shadow-glow" style={{ animationDelay: '0.1s' }}>
+              <div className="inline-block px-4 py-2 bg-secondary/10 backdrop-blur-sm border-2 border-secondary/50 rounded-full text-secondary text-sm font-bold animate-bounce-in shadow-glow-secondary" style={{ animationDelay: '0.1s' }}>
                 Student #99626
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-scale-in">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-scale-in tracking-tight">
               Career Pathways
               <span className="text-gradient block mt-2 bg-gradient-to-r from-primary via-secondary to-accent animate-shimmer bg-clip-text">
                 in Tech & Innovation
@@ -49,17 +49,17 @@ const Index = () => {
 
           {/* Core Interest */}
           <div className="mt-12 animate-scale-in" style={{ animationDelay: '0.3s' }}>
-            <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 border-primary/30 shadow-xl hover-lift relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Card className="p-6 bg-card/90 backdrop-blur-sm border-2 border-primary/40 shadow-xl hover-lift relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="flex items-start gap-4 relative z-10">
-                <div className="p-3 bg-gradient-to-br from-primary-lighter to-primary/20 rounded-lg shadow-lg animate-pulse-ring">
+                <div className="p-3 bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 rounded-lg shadow-lg animate-pulse-ring">
                   <Sparkles className="w-6 h-6 text-primary animate-float" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-muted-foreground uppercase tracking-wide mb-2">
+                  <h3 className="text-lg font-bold text-primary uppercase tracking-wide mb-2">
                     My Passion
                   </h3>
-                  <p className="text-lg text-foreground leading-relaxed">
+                  <p className="text-lg text-foreground leading-relaxed font-medium">
                     Building software applications to improve the well-being of all while solving impossible questions through AI and innovative technology
                   </p>
                 </div>
@@ -103,7 +103,7 @@ const Index = () => {
       </section>
 
       {/* Visual Pathways Section */}
-      <section id="visual" className="py-20 px-6 bg-background">
+      <section id="visual" className="py-20 px-6 bg-gradient-to-b from-background to-card/50">
         <div className="container mx-auto max-w-7xl">
           <SectionHeader
             title="Visual Pathways Representation"
@@ -274,21 +274,21 @@ const Index = () => {
 
           {/* Ultimate Dream Pathway */}
           <div className="animate-fade-in relative">
-            <Card className="p-8 bg-gradient-to-br from-primary-lighter via-secondary-lighter to-accent-lighter border-2 border-primary shadow-xl relative overflow-hidden group">
+            <Card className="p-8 bg-gradient-to-br from-card/80 via-card to-card/80 backdrop-blur-sm border-2 border-primary/50 shadow-2xl hover:shadow-glow relative overflow-hidden group">
               {/* Animated background elements */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-float" />
-                <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-float-slow" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-secondary/5 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute top-10 left-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl animate-float" />
+                <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/20 rounded-full blur-2xl animate-float-slow" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-pulse" />
               </div>
 
               <div className="text-center mb-8 relative z-10">
                 <div className="inline-flex items-center gap-2 mb-3 animate-bounce-in">
                   <Rocket className="w-6 h-6 text-primary animate-float" />
-                  <h3 className="text-3xl font-bold text-foreground">Ultimate Dream Pathway</h3>
+                  <h3 className="text-3xl font-bold text-foreground tracking-tight">Ultimate Dream Pathway</h3>
                   <Zap className="w-6 h-6 text-accent animate-float" style={{ animationDelay: '0.5s' }} />
                 </div>
-                <p className="text-muted-foreground text-lg">A journey from technical expertise to national leadership</p>
+                <p className="text-foreground/70 text-lg font-medium">A journey from technical expertise to national leadership</p>
               </div>
 
               <TooltipProvider>
@@ -297,13 +297,13 @@ const Index = () => {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="group/stage relative cursor-pointer">
-                        <div className="absolute inset-0 bg-primary/20 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" />
-                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-primary transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/80">
-                          <div className="p-3 bg-gradient-to-br from-primary-lighter to-primary/30 rounded-full shadow-lg group-hover/stage:animate-pulse">
+                        <div className="absolute inset-0 bg-primary/30 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" />
+                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-primary/60 transition-all duration-500 hover:scale-110 hover:shadow-glow hover:-translate-y-2 hover:border-primary">
+                          <div className="p-3 bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 rounded-full shadow-lg group-hover/stage:animate-pulse">
                             <TrendingUp className="w-8 h-8 text-primary transition-transform duration-300 group-hover/stage:rotate-12" />
                           </div>
                           <div className="text-center">
-                            <div className="text-xs uppercase tracking-wider text-primary/70 font-semibold mb-1">Phase 1</div>
+                            <div className="text-xs uppercase tracking-wider text-primary font-bold mb-1">Phase 1</div>
                             <span className="text-lg font-bold text-primary block">Quantitative</span>
                             <span className="text-lg font-bold text-primary">Developer</span>
                           </div>
@@ -326,13 +326,13 @@ const Index = () => {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="group/stage relative cursor-pointer">
-                        <div className="absolute inset-0 bg-secondary/20 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" style={{ animationDelay: '0.2s' }} />
-                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-secondary transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-2 hover:border-secondary/80">
-                          <div className="p-3 bg-gradient-to-br from-secondary-lighter to-secondary/30 rounded-full shadow-lg group-hover/stage:animate-pulse">
+                        <div className="absolute inset-0 bg-secondary/30 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" style={{ animationDelay: '0.2s' }} />
+                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-secondary/60 transition-all duration-500 hover:scale-110 hover:shadow-glow-secondary hover:-translate-y-2 hover:border-secondary">
+                          <div className="p-3 bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/40 rounded-full shadow-lg group-hover/stage:animate-pulse">
                             <Sparkles className="w-8 h-8 text-secondary transition-transform duration-300 group-hover/stage:rotate-12" />
                           </div>
                           <div className="text-center">
-                            <div className="text-xs uppercase tracking-wider text-secondary/70 font-semibold mb-1">Phase 2</div>
+                            <div className="text-xs uppercase tracking-wider text-secondary font-bold mb-1">Phase 2</div>
                             <span className="text-lg font-bold text-secondary block">Tech</span>
                             <span className="text-lg font-bold text-secondary">Founder</span>
                           </div>
@@ -355,13 +355,13 @@ const Index = () => {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="group/stage relative cursor-pointer">
-                        <div className="absolute inset-0 bg-accent/20 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" style={{ animationDelay: '0.4s' }} />
-                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-accent transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-2 hover:border-accent/80">
-                          <div className="p-3 bg-gradient-to-br from-accent-lighter to-accent/30 rounded-full shadow-lg group-hover/stage:animate-pulse">
+                        <div className="absolute inset-0 bg-accent/30 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" style={{ animationDelay: '0.4s' }} />
+                        <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-accent/60 transition-all duration-500 hover:scale-110 hover:shadow-glow-accent hover:-translate-y-2 hover:border-accent">
+                          <div className="p-3 bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/40 rounded-full shadow-lg group-hover/stage:animate-pulse">
                             <Users className="w-8 h-8 text-accent transition-transform duration-300 group-hover/stage:rotate-12" />
                           </div>
                           <div className="text-center">
-                            <div className="text-xs uppercase tracking-wider text-accent/70 font-semibold mb-1">Phase 3</div>
+                            <div className="text-xs uppercase tracking-wider text-accent font-bold mb-1">Phase 3</div>
                             <span className="text-lg font-bold text-accent block">AI</span>
                             <span className="text-lg font-bold text-accent">Minister</span>
                           </div>
@@ -378,7 +378,7 @@ const Index = () => {
 
               {/* Enhanced description with timeline */}
               <div className="relative z-10 mt-8 space-y-4">
-                <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                <p className="text-center text-sm text-foreground/70 max-w-3xl mx-auto leading-relaxed font-medium">
                   Building technical foundations in quantitative finance, gaining entrepreneurial experience
                   through founding and scaling a tech company, then leveraging this expertise to shape
                   national AI policy and lead Canada's technological future.
@@ -386,14 +386,14 @@ const Index = () => {
                 
                 {/* Key milestones */}
                 <div className="flex flex-wrap justify-center gap-4 mt-6">
-                  <div className="group/milestone px-4 py-2 bg-primary-lighter/50 backdrop-blur-sm rounded-full border border-primary/30 hover:border-primary transition-all duration-300 hover:scale-105 cursor-default">
-                    <span className="text-xs font-semibold text-primary">15+ Years Journey</span>
+                  <div className="group/milestone px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border-2 border-primary/40 hover:border-primary hover:bg-primary/20 transition-all duration-300 hover:scale-105 cursor-default shadow-md hover:shadow-glow">
+                    <span className="text-xs font-bold text-primary tracking-wide">15+ Years Journey</span>
                   </div>
-                  <div className="group/milestone px-4 py-2 bg-secondary-lighter/50 backdrop-blur-sm rounded-full border border-secondary/30 hover:border-secondary transition-all duration-300 hover:scale-105 cursor-default">
-                    <span className="text-xs font-semibold text-secondary">3 Distinct Phases</span>
+                  <div className="group/milestone px-4 py-2 bg-secondary/10 backdrop-blur-sm rounded-full border-2 border-secondary/40 hover:border-secondary hover:bg-secondary/20 transition-all duration-300 hover:scale-105 cursor-default shadow-md hover:shadow-glow-secondary">
+                    <span className="text-xs font-bold text-secondary tracking-wide">3 Distinct Phases</span>
                   </div>
-                  <div className="group/milestone px-4 py-2 bg-accent-lighter/50 backdrop-blur-sm rounded-full border border-accent/30 hover:border-accent transition-all duration-300 hover:scale-105 cursor-default">
-                    <span className="text-xs font-semibold text-accent">National Impact</span>
+                  <div className="group/milestone px-4 py-2 bg-accent/10 backdrop-blur-sm rounded-full border-2 border-accent/40 hover:border-accent hover:bg-accent/20 transition-all duration-300 hover:scale-105 cursor-default shadow-md hover:shadow-glow-accent">
+                    <span className="text-xs font-bold text-accent tracking-wide">National Impact</span>
                   </div>
                 </div>
               </div>
@@ -403,7 +403,7 @@ const Index = () => {
       </section>
 
       {/* Written Reflection Section */}
-      <section id="reflection" className="py-16 px-6 bg-muted/30">
+      <section id="reflection" className="py-16 px-6 bg-gradient-to-b from-card/50 to-background">
         <div className="container mx-auto max-w-4xl">
           <SectionHeader
             title="Written Reflection"
@@ -412,7 +412,7 @@ const Index = () => {
 
           <div className="space-y-6">
             {/* Introduction */}
-            <Card className="p-6 hover-lift">
+            <Card className="p-6 hover-lift bg-card/90 backdrop-blur-sm border-2 border-primary/30">
               <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-3">
                 <div className="w-2 h-6 bg-primary rounded-full" />
                 Introduction
@@ -425,7 +425,7 @@ const Index = () => {
             </Card>
 
             {/* Values Fit */}
-            <Card className="p-6 hover-lift">
+            <Card className="p-6 hover-lift bg-card/90 backdrop-blur-sm border-2 border-secondary/30">
               <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-3">
                 <div className="w-2 h-6 bg-secondary rounded-full" />
                 Values Fit & Success Metrics
@@ -444,7 +444,7 @@ const Index = () => {
             </Card>
 
             {/* Community */}
-            <Card className="p-6 hover-lift">
+            <Card className="p-6 hover-lift bg-card/90 backdrop-blur-sm border-2 border-accent/30">
               <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-3">
                 <div className="w-2 h-6 bg-accent rounded-full" />
                 Community Influence
@@ -457,7 +457,7 @@ const Index = () => {
             </Card>
 
             {/* AI Reflection */}
-            <Card className="p-6 hover-lift">
+            <Card className="p-6 hover-lift bg-card/90 backdrop-blur-sm border-2 border-primary/30">
               <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-3">
                 <div className="w-2 h-6 bg-primary rounded-full" />
                 AI Usage
@@ -475,14 +475,14 @@ const Index = () => {
         </div>
       </section>
       {/* References Section */}
-      <section id="references" className="py-16 px-6 bg-background">
+      <section id="references" className="py-16 px-6 bg-gradient-to-b from-background to-card/50">
         <div className="container mx-auto max-w-4xl">
           <SectionHeader
             title="References"
             subtitle="APA 7th Edition sources"
           />
 
-          <Card className="p-6">
+          <Card className="p-6 bg-card/90 backdrop-blur-sm border-2 border-primary/30">
             <div className="space-y-3 text-sm text-foreground leading-relaxed">
               <p className="font-semibold text-base mb-3">Sources:</p>
 
@@ -508,7 +508,7 @@ const Index = () => {
                 OpenAI. (2024). <em>ChatGPT (GPT-4)</em>. https://chat.openai.com/
               </p>
 
-              <p className="text-muted-foreground mt-4 italic text-xs">
+              <p className="text-foreground/60 mt-4 italic text-xs font-medium">
                 AI-assisted research verified with UBC resources, alumni insights, and faculty consultations.
               </p>
             </div>
@@ -517,12 +517,12 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 px-6 bg-muted border-t border-border">
+      <footer className="py-8 px-6 bg-card border-t-2 border-primary/20">
         <div className="container mx-auto max-w-6xl text-center">
-          <p className="text-sm text-muted-foreground">
-            COMM 105: Values, Ethics, and Community | Student #11699626
+          <p className="text-sm text-foreground/80 font-medium">
+            COMM 105: Values, Ethics, and Community | Student #99626
           </p>
-          <p className="text-xs text-muted-foreground mt-1">
+          <p className="text-xs text-foreground/60 mt-2 font-medium">
             UBC Combined Major in Business & Computer Science
           </p>
         </div>
