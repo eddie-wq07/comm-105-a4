@@ -116,12 +116,12 @@ export const PathwayCarousel = () => {
               className="flex-[0_0_100%] min-w-0 md:flex-[0_0_80%] lg:flex-[0_0_70%] px-2"
             >
               <div
-                className={`group perspective-1000 ${
+                className={`group perspective-1000 relative ${
                   index === selectedIndex ? "animate-scale-in" : ""
                 }`}
               >
                 {/* 3D Card Container */}
-                <div className="relative transform-style-3d transition-all duration-500 hover:scale-[1.02]">
+                <div className="relative transform-style-3d transition-all duration-500 hover:scale-105 hover:-translate-y-4 hover:z-50 origin-center">
                   {/* Image with 3D effect */}
                   <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-glow">
                     <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/40 z-10" />
