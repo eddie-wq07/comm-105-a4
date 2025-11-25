@@ -5,7 +5,7 @@ import { ValueBadge } from "@/components/ValueBadge";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { ArrowRight, Sparkles, Target, Users, Scale, TrendingUp, Gavel, Brain, Code, BookOpen, Briefcase, Lightbulb, Zap, Rocket } from "lucide-react";
+import { ArrowRight, Sparkles, Target, Users, Scale, TrendingUp, Briefcase, Code, BookOpen, Lightbulb, Zap, Rocket, Satellite, BarChart3 } from "lucide-react";
 
 const Index = () => {
   return (
@@ -60,7 +60,7 @@ const Index = () => {
                     My Passion
                   </h3>
                   <p className="text-lg text-foreground leading-relaxed font-medium">
-                    Building software applications to improve the well-being of all while solving impossible questions through AI and innovative technology
+                    Exploring the frontiers of space, technology, and economics to advance human potential and solve complex challenges across multiple disciplines
                   </p>
                 </div>
               </div>
@@ -107,166 +107,166 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <SectionHeader
             title="Visual Pathways Representation"
-            subtitle="Three distinct career paths converging toward technological innovation and societal impact"
+            subtitle="Three distinct career paths exploring space exploration, strategic consulting, and economic analysis"
           />
 
           {/* Career Paths Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Path 1: Quantitative Developer */}
-            <PathwayNode title="Quantitative Developer" color="primary" icon={TrendingUp} className="animate-slide-in">
+            {/* Path 1: Astronaut */}
+            <PathwayNode title="Astronaut" color="primary" icon={Rocket} className="animate-slide-in">
               <PathwayDetail label="Skills">
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Rocket className="w-4 h-4 text-primary" />
+                    Spacecraft operations & piloting
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
                     <Code className="w-4 h-4 text-primary" />
-                    Python, C++, R programming
+                    Engineering & robotics
                   </li>
                   <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <TrendingUp className="w-4 h-4 text-primary" />
-                    Statistical modeling
+                    <Target className="w-4 h-4 text-primary" />
+                    Extreme environment adaptation
                   </li>
                   <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <Briefcase className="w-4 h-4 text-primary" />
-                    Financial mathematics
-                  </li>
-                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <Brain className="w-4 h-4 text-primary" />
-                    Machine learning
+                    <Users className="w-4 h-4 text-primary" />
+                    Team collaboration under pressure
                   </li>
                 </ul>
               </PathwayDetail>
 
               <PathwayDetail label="Education & Training">
                 <p className="text-sm">
-                  Combined Major in Business & CS (BUCS), quantitative methods focus, CFA Level I certification
+                  BUCS with aerospace focus, advanced degrees in engineering or physics, astronaut candidate program, extensive flight training
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Experience">
                 <p className="text-sm">
-                  UBC Algorithmic Trading Club, CPSC TA, computational finance research, fintech hackathons
+                  Canadian Space Agency programs, pilot training, research missions, International Space Station simulations
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Impact">
                 <p className="text-sm">
-                  Financial literacy workshops, open-source contributions to quantitative libraries
+                  Advancing human space exploration, contributing to scientific research, inspiring future generations in STEM
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Questions">
                 <ul className="space-y-1 text-sm">
-                  <li>• How to balance algorithmic efficiency with ethical trading?</li>
-                  <li>• What role will quantum computing play in quant strategies?</li>
+                  <li>• How can we make space exploration more accessible and sustainable?</li>
+                  <li>• What role will private space companies play in future missions?</li>
                 </ul>
               </PathwayDetail>
             </PathwayNode>
 
-            {/* Path 2: AI Minister */}
+            {/* Path 2: Consultant (Tech & Astrodynamics) */}
             <PathwayNode
-              title="AI Minister"
+              title="Tech & Astrodynamics Consultant"
               color="secondary"
-              icon={Brain}
+              icon={Satellite}
               className="animate-slide-in"
               style={{ animationDelay: "0.1s" }}
             >
               <PathwayDetail label="Skills">
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <Scale className="w-4 h-4 text-secondary" />
-                    Public policy development
+                    <Satellite className="w-4 h-4 text-secondary" />
+                    Orbital mechanics & trajectory analysis
                   </li>
                   <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <Brain className="w-4 h-4 text-secondary" />
-                    AI ethics & governance
+                    <Briefcase className="w-4 h-4 text-secondary" />
+                    Strategic business consulting
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Code className="w-4 h-4 text-secondary" />
+                    Technical systems analysis
                   </li>
                   <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
                     <Users className="w-4 h-4 text-secondary" />
-                    Stakeholder engagement
-                  </li>
-                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <Target className="w-4 h-4 text-secondary" />
-                    Strategic planning
+                    Client relationship management
                   </li>
                 </ul>
               </PathwayDetail>
 
               <PathwayDetail label="Education & Training">
                 <p className="text-sm">
-                  BUCS with policy courses, graduate studies in public administration, AI policy training
+                  BUCS with aerospace specialization, MBA or graduate studies in engineering, consulting methodology training
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Experience">
                 <p className="text-sm">
-                  Tech Policy Club president, government tech internships, Model Parliament, tech education advocacy
+                  Space technology firms, consulting rotations, satellite systems projects, aerospace industry research
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Impact">
                 <p className="text-sm">
-                  Inclusive AI policies for diverse communities, digital literacy programs for marginalized groups
+                  Optimizing space mission designs, advising aerospace startups, advancing satellite technology applications
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Questions">
                 <ul className="space-y-1 text-sm">
-                  <li>• How can Canada compete in AI while maintaining values?</li>
-                  <li>• What frameworks best balance innovation and protection?</li>
+                  <li>• How can astrodynamics expertise drive commercial space ventures?</li>
+                  <li>• What consulting approaches best serve emerging space tech companies?</li>
                 </ul>
               </PathwayDetail>
             </PathwayNode>
 
-            {/* Path 3: Tech Lawyer */}
+            {/* Path 3: Financial Analyst (Quantitative Economics) */}
             <PathwayNode
-              title="Tech Lawyer"
+              title="Financial Analyst (Quantitative Economics)"
               color="accent"
-              icon={Gavel}
+              icon={BarChart3}
               className="animate-slide-in"
               style={{ animationDelay: "0.2s" }}
             >
               <PathwayDetail label="Skills">
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <BarChart3 className="w-4 h-4 text-accent" />
+                    Econometric modeling
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <TrendingUp className="w-4 h-4 text-accent" />
+                    Financial forecasting & analysis
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    <Code className="w-4 h-4 text-accent" />
+                    Python, R, SQL programming
+                  </li>
+                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
                     <BookOpen className="w-4 h-4 text-accent" />
-                    Legal research
-                  </li>
-                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <Gavel className="w-4 h-4 text-accent" />
-                    Technology & IP law
-                  </li>
-                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <Briefcase className="w-4 h-4 text-accent" />
-                    Contract negotiation
-                  </li>
-                  <li className="flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    <Lightbulb className="w-4 h-4 text-accent" />
-                    AI systems understanding
+                    Economic policy analysis
                   </li>
                 </ul>
               </PathwayDetail>
 
               <PathwayDetail label="Education & Training">
                 <p className="text-sm">
-                  BUCS followed by JD, specialized tech law and IP courses, bar admission, continuing education in AI law
+                  BUCS with economics concentration, CFA certification, advanced econometrics courses, quantitative methods training
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Experience">
                 <p className="text-sm">
-                  Pre-Law Society, tech policy research, legal aid for startups, moot court competitions
+                  Economic research assistant, financial modeling internships, data analysis projects, investment banking rotations
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Impact">
                 <p className="text-sm">
-                  Pro bono services for tech startups, workshops on digital rights and AI liability
+                  Developing accessible economic education resources, pro bono financial analysis for non-profits
                 </p>
               </PathwayDetail>
 
               <PathwayDetail label="Questions">
                 <ul className="space-y-1 text-sm">
-                  <li>• Who is liable when AI systems cause harm?</li>
-                  <li>• How should copyright law evolve for AI-generated content?</li>
+                  <li>• How can quantitative economics inform sustainable investment strategies?</li>
+                  <li>• What role does behavioral economics play in financial forecasting?</li>
                 </ul>
               </PathwayDetail>
             </PathwayNode>
@@ -288,31 +288,30 @@ const Index = () => {
                   <h3 className="text-3xl font-bold text-foreground tracking-tight">Ultimate Dream Pathway</h3>
                   <Zap className="w-6 h-6 text-accent animate-float" style={{ animationDelay: '0.5s' }} />
                 </div>
-                <p className="text-foreground/70 text-lg font-medium">A journey from technical expertise to national leadership</p>
+                <p className="text-foreground/70 text-lg font-medium">A journey from space exploration to strategic consulting and economic leadership</p>
               </div>
 
               <TooltipProvider>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-8 relative z-10">
-                  {/* Stage 1: Quantitative Developer */}
+                  {/* Stage 1: Astronaut */}
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="group/stage relative cursor-pointer">
                         <div className="absolute inset-0 bg-primary/30 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" />
                         <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-primary/60 transition-all duration-500 hover:scale-110 hover:shadow-glow hover:-translate-y-2 hover:border-primary">
                           <div className="p-3 bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 rounded-full shadow-lg group-hover/stage:animate-pulse">
-                            <TrendingUp className="w-8 h-8 text-primary transition-transform duration-300 group-hover/stage:rotate-12" />
+                            <Rocket className="w-8 h-8 text-primary transition-transform duration-300 group-hover/stage:rotate-12" />
                           </div>
                           <div className="text-center">
                             <div className="text-xs uppercase tracking-wider text-primary font-bold mb-1">Phase 1</div>
-                            <span className="text-lg font-bold text-primary block">Quantitative</span>
-                            <span className="text-lg font-bold text-primary">Developer</span>
+                            <span className="text-lg font-bold text-primary block">Astronaut</span>
                           </div>
                         </div>
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs p-4">
-                      <p className="font-semibold mb-2">Foundation Phase (Years 1-5)</p>
-                      <p className="text-sm">Master algorithmic trading, build technical credibility, and develop deep understanding of financial systems through hands-on development.</p>
+                      <p className="font-semibold mb-2">Foundation Phase (Years 1-8)</p>
+                      <p className="text-sm">Complete rigorous astronaut training, participate in space missions, and develop expertise in spacecraft operations and scientific research in extreme environments.</p>
                     </TooltipContent>
                   </Tooltip>
 
@@ -322,26 +321,26 @@ const Index = () => {
                     <ArrowRight className="w-10 h-10 text-primary rotate-90 md:rotate-0 relative z-10 animate-pulse transition-transform hover:scale-125" />
                   </div>
 
-                  {/* Stage 2: Tech Founder */}
+                  {/* Stage 2: Consultant */}
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="group/stage relative cursor-pointer">
                         <div className="absolute inset-0 bg-secondary/30 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" style={{ animationDelay: '0.2s' }} />
                         <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-secondary/60 transition-all duration-500 hover:scale-110 hover:shadow-glow-secondary hover:-translate-y-2 hover:border-secondary">
                           <div className="p-3 bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/40 rounded-full shadow-lg group-hover/stage:animate-pulse">
-                            <Sparkles className="w-8 h-8 text-secondary transition-transform duration-300 group-hover/stage:rotate-12" />
+                            <Satellite className="w-8 h-8 text-secondary transition-transform duration-300 group-hover/stage:rotate-12" />
                           </div>
                           <div className="text-center">
                             <div className="text-xs uppercase tracking-wider text-secondary font-bold mb-1">Phase 2</div>
-                            <span className="text-lg font-bold text-secondary block">Tech</span>
-                            <span className="text-lg font-bold text-secondary">Founder</span>
+                            <span className="text-lg font-bold text-secondary block">Tech & Astrodynamics</span>
+                            <span className="text-lg font-bold text-secondary">Consultant</span>
                           </div>
                         </div>
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs p-4">
-                      <p className="font-semibold mb-2">Growth Phase (Years 5-12)</p>
-                      <p className="text-sm">Launch and scale an AI-driven fintech startup, gain entrepreneurial experience, and build networks across technology and business sectors.</p>
+                      <p className="font-semibold mb-2">Growth Phase (Years 8-15)</p>
+                      <p className="text-sm">Leverage space experience to advise aerospace companies, optimize mission designs, and bridge technical expertise with business strategy in the emerging space economy.</p>
                     </TooltipContent>
                   </Tooltip>
 
@@ -351,26 +350,26 @@ const Index = () => {
                     <ArrowRight className="w-10 h-10 text-secondary rotate-90 md:rotate-0 relative z-10 animate-pulse transition-transform hover:scale-125" style={{ animationDelay: '0.2s' }} />
                   </div>
 
-                  {/* Stage 3: AI Minister */}
+                  {/* Stage 3: Financial Analyst */}
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="group/stage relative cursor-pointer">
                         <div className="absolute inset-0 bg-accent/30 rounded-xl blur-xl opacity-0 group-hover/stage:opacity-100 transition-all duration-500 animate-pulse" style={{ animationDelay: '0.4s' }} />
                         <div className="relative flex flex-col items-center gap-3 bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-sm px-8 py-6 rounded-xl shadow-lg border-2 border-accent/60 transition-all duration-500 hover:scale-110 hover:shadow-glow-accent hover:-translate-y-2 hover:border-accent">
                           <div className="p-3 bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/40 rounded-full shadow-lg group-hover/stage:animate-pulse">
-                            <Users className="w-8 h-8 text-accent transition-transform duration-300 group-hover/stage:rotate-12" />
+                            <BarChart3 className="w-8 h-8 text-accent transition-transform duration-300 group-hover/stage:rotate-12" />
                           </div>
                           <div className="text-center">
                             <div className="text-xs uppercase tracking-wider text-accent font-bold mb-1">Phase 3</div>
-                            <span className="text-lg font-bold text-accent block">AI</span>
-                            <span className="text-lg font-bold text-accent">Minister</span>
+                            <span className="text-lg font-bold text-accent block">Financial Analyst</span>
+                            <span className="text-lg font-bold text-accent">(Quant Economics)</span>
                           </div>
                         </div>
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs p-4">
-                      <p className="font-semibold mb-2">Leadership Phase (Years 12+)</p>
-                      <p className="text-sm">Shape national AI policy with real-world experience, lead Canada's technological innovation, and create frameworks that balance progress with ethics.</p>
+                      <p className="font-semibold mb-2">Leadership Phase (Years 15+)</p>
+                      <p className="text-sm">Apply quantitative economics expertise to analyze space industry investments, evaluate emerging markets, and shape economic policy for the commercial space sector.</p>
                     </TooltipContent>
                   </Tooltip>
                 </div>
@@ -379,9 +378,7 @@ const Index = () => {
               {/* Enhanced description with timeline */}
               <div className="relative z-10 mt-8 space-y-4">
                 <p className="text-center text-sm text-foreground/70 max-w-3xl mx-auto leading-relaxed font-medium">
-                  Building technical foundations in quantitative finance, gaining entrepreneurial experience
-                  through founding and scaling a tech company, then leveraging this expertise to shape
-                  national AI policy and lead Canada's technological future.
+                  Beginning with space exploration as an astronaut, transitioning to strategic consulting in aerospace technology and astrodynamics, then applying quantitative economics expertise to analyze and shape the future of the space economy.
                 </p>
                 
                 {/* Key milestones */}
@@ -419,16 +416,16 @@ const Index = () => {
               </h3>
               <div className="space-y-3 text-foreground leading-relaxed text-sm">
                 <p>
-                  I spent hours programming and debugging the interactive features to show my passion for business, technology, and impact. The blended gradient colors represent how these areas come together. The interactions highlight innovation and my attention to detail as a software engineer, with the user always at the center. The main takeaway from my visual is that software is both powerful and creative, which is why I chose to code my assignment as a way to express my passion.
+                  I spent hours programming and debugging the interactive features to show my passion for space exploration, technology consulting, and economic analysis. The blended gradient colors represent how these distinct fields converge into a unified vision. The interactions highlight innovation and my attention to detail as a software engineer, with the user always at the center. The main takeaway from my visual is that software is both powerful and creative, which is why I chose to code my assignment as a way to express my passion.
                 </p>
                 <p>
-                  The glowing background on hover reflects how I see each pathway: bright, promising, and full of potential, not just for me personally, but for future careers and job creation.
+                  The glowing background on hover reflects how I see each pathway: bright, promising, and full of potential, not just for me personally, but for advancing human exploration and understanding across multiple frontiers.
                 </p>
                 <p>
-                  I also paid close attention to the hover effects for the individual skills. To me, each skill stands on its own and requires focused effort, but they all eventually merge into a single, cohesive whole. I included icons to reinforce this: a bullish market chart for quantitative developer to represent growth and opportunity, and a brain for AI minister to emphasize that human intelligence is our natural "supercomputer," something AI can't replace, and a reminder of why it matters.
+                  I also paid close attention to the hover effects for the individual skills. To me, each skill stands on its own and requires focused effort, but they all eventually merge into a single, cohesive whole. I included icons to reinforce this: a rocket for astronaut to represent exploration and pushing boundaries, a satellite for the consultant pathway to symbolize the intersection of technology and orbital dynamics, and a bar chart for the financial analyst to represent data-driven economic insights.
                 </p>
                 <p>
-                  Finally, the tech lawyer icon uses a gavel to symbolize influence and authority. It represents the need for clarity and guidance in a space full of noise and uncertainty, especially with the rapid rise of AI.
+                  These icons reflect the core essence of each career: the astronaut represents human potential reaching for the stars, the consultant bridges technical expertise with strategic thinking, and the financial analyst applies rigorous quantitative methods to understand complex economic systems.
                 </p>
               </div>
             </Card>
@@ -441,13 +438,13 @@ const Index = () => {
               </h3>
               <div className="space-y-3 text-foreground leading-relaxed text-sm">
                 <p>
-                  <strong>Quantitative Developer:</strong> Success measured by algorithmic performance (Sharpe ratio &gt; 2.0) and open-source contributions (3+ libraries with 1,000+ users). Potential conflict: pressure to exploit inefficiencies at retail investors' expense. Mitigation: transparent practices and financial literacy programs.
+                  <strong>Astronaut:</strong> Success measured by successful mission completions, scientific research contributions, and inspiring public engagement in space exploration. Potential conflict: prioritizing personal achievement over crew safety. Mitigation: rigorous adherence to safety protocols and emphasis on collaborative mission success.
                 </p>
                 <p>
-                  <strong>AI Minister:</strong> Success through AI governance frameworks adopted by 5+ provinces and inclusive policy recognition. Potential conflict: prioritizing economic gains over safety. Mitigation: independent research and multi-stakeholder advisory committees.
+                  <strong>Tech & Astrodynamics Consultant:</strong> Success through optimized mission designs adopted by 10+ aerospace clients and thought leadership in space technology strategy. Potential conflict: recommending cost-cutting measures that compromise safety. Mitigation: maintaining independence and prioritizing ethical considerations in all recommendations.
                 </p>
                 <p>
-                  <strong>Tech Lawyer:</strong> Success via 20+ precedent-setting AI cases and 200+ pro bono hours annually. Potential conflict: career-advancing cases that cause societal harm. Mitigation: maintain ethical code prioritizing harm prevention over advancement.
+                  <strong>Financial Analyst (Quantitative Economics):</strong> Success via accurate economic forecasts (90%+ confidence intervals), influential policy papers, and accessible economic education initiatives. Potential conflict: pressure to manipulate data for favorable outcomes. Mitigation: commitment to data integrity and transparent methodology disclosure.
                 </p>
               </div>
             </Card>
@@ -460,7 +457,7 @@ const Index = () => {
               </h3>
               <div className="space-y-3 text-foreground leading-relaxed text-sm">
                 <p>
-                  <strong>UBC Faculty:</strong> CS professors researching AI fairness revealed how technical decisions embed values, inspiring policy interest. <strong>Alumni Network:</strong> Quant finance alumni shared ethical considerations in algorithmic trading. <strong>Tech Policy Club:</strong> Peer debates on AI regulation challenged assumptions and reinforced the need for combined technical, entrepreneurial, and policy expertise.
+                  <strong>UBC Faculty:</strong> Engineering professors working on aerospace systems demonstrated how interdisciplinary thinking drives innovation. <strong>Alumni Network:</strong> Former astronauts and aerospace consultants shared insights on career pathways and the importance of diverse skill sets. <strong>Student Organizations:</strong> Participation in space exploration clubs and economics societies revealed the interconnectedness of technology, business strategy, and quantitative analysis.
                 </p>
               </div>
             </Card>
@@ -473,10 +470,10 @@ const Index = () => {
               </h3>
               <div className="space-y-2 text-foreground leading-relaxed text-sm">
                 <p>
-                  Used ChatGPT-4 to explore career requirements. Initial prompt: "What skills are essential for a quantitative developer in 2025?" Output lacked ethical dimensions. Revised: "What skills for Canadian quant roles in 2025, emphasizing ethical practices and open-source contributions?" This highlighted ESG factors and community impact opportunities, aligning with my <em>balance</em> value.
+                  Used ChatGPT-4 to explore career pathways in aerospace and economics. Initial prompt: "What skills are essential for becoming an astronaut in 2025?" Output focused on technical requirements. Revised: "What skills and experiences are needed for a career path from astronaut to aerospace consultant to quantitative economics analyst, emphasizing interdisciplinary connections?" This revealed how space exploration experience translates to consulting expertise and economic analysis applications.
                 </p>
                 <p>
-                  <strong>Learning:</strong> AI tools excel at breadth but require iterative prompting to incorporate values and context. They complement but don't replace human judgment in career exploration.
+                  <strong>Learning:</strong> AI tools excel at identifying connections between disparate fields when prompted thoughtfully. Iterative questioning reveals how skills transfer across career transitions, aligning with my values of <em>rigour</em> in preparation and <em>risk-taking</em> in pursuing unconventional pathways.
                 </p>
               </div>
             </Card>
